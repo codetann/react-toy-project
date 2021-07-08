@@ -42,11 +42,20 @@ export default function FilterString() {
           style={{ color: "#ffffff36" }}
         >{`[ "James", "Jessica", "Melody", "Tyler", "Blake", "Jennifer", "Mark", "Maddy" ]`}</p>
       </Desc>
+      <div style={{
+        display: 'flex',
+        width: '100%'
+
+      }}>
       <Input
+        style={{flex: 1, padding: 0, textAlign: 'center'}}
         onChange={(e) => setValue(e.target.value)}
-        placeholder="Enter Value Here"
+        placeholder=""
+        maxLength='1'
       />
-      <Button t="Filter" onClick={handleClick} />
+      <Button style={{flex: 8, marginLeft: '1rem'}} t="Filter" onClick={handleClick} />
+      </div>
+
       <Output text="Filterd: " data={text} />
     </Card>
   );
