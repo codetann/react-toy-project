@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+// styled components
+import { Application } from "./App.style";
+import EvenOdd from "./toys/EvenOdd/EvenOdd";
+import FilterObj from "./toys/FilterObj/FilterObj";
+import FilterString from "./toys/FilterString/FilterString";
+import Palindrome from "./toys/Palindrome/Palindrome";
+import Sum from "./toys/Sum/Sum";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Application>
+      <EvenOdd />
+      <FilterObj />
+      <FilterString />
+      <Palindrome />
+      <Sum />
+    </Application>
   );
 }
 
